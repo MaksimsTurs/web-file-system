@@ -1,0 +1,12 @@
+{
+  "include": ["./vite/**/*.*", "const.ts"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "composite": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["vite/client"]
+  }
+}

@@ -1,0 +1,11 @@
+@use './reusable.scss' as *;
+@forward './reset/default';
+@forward './reset/input';
+
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+}

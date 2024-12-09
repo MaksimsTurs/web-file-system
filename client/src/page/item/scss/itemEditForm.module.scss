@@ -1,0 +1,21 @@
+@use '@/scss/reusable' as *;
+
+.item_edit_form {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  width: 100%;
+  height: fit-content;
+  gap: 0.25rem;
+
+  .item_remove_button {
+    background-color: #500;
+
+    &:hover {
+      color: #500;
+      box-shadow: 1px 2px 2px #500;
+      transition: all $transition-time-fast ease;
+      background-color: white;
+    }
+  }
+}

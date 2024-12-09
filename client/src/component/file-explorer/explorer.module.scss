@@ -1,0 +1,32 @@
+@use '@/scss/reusable.scss' as *;
+
+.explorer_container {
+  flex-grow: 1;
+  
+  .explorer_body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 0.5rem;
+  }
+}
+
+.explorer_selected_container {
+  cursor: pointer;
+
+  .explorer_selected_icon {
+    @include absolute-left-top-zindex-width-height(82%, 5%);
+    color: silver;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &:hover {
+      color: green;
+    }
+  }
+
+  .explorer_selected_icon_selected {
+    color: green;
+  }
+}
+
+.explorer_confirm_action_button { margin: 0rem 0rem 0.5rem 0.5rem; }

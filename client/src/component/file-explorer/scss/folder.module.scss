@@ -1,0 +1,27 @@
+@use '@/scss/reusable.scss' as *; 
+
+.folder_container {
+  font-size: $font-large;
+  transition: all $transition-time-fast ease;
+  padding: 1rem;
+  height: 6rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  > p { @include text-overflow-ellipsis(); }
+
+  > svg { 
+    height: $icon-x-large; 
+    width: $icon-x-large; 
+    min-height: $icon-x-large; 
+    min-width: $icon-x-large; 
+  }
+
+  &:hover {
+    color: $color-blue;
+    background-color: $color-hover-blue;
+    transition: all $transition-time-fast ease;
+    border: 1px solid $color-blue;
+    box-shadow: 1px 3px 3px $color-hover-blue;
+  }
+}

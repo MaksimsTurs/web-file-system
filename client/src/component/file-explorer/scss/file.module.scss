@@ -1,0 +1,89 @@
+@use '@/scss/reusable.scss' as *; 
+
+.file_container {
+  font-size: $font-large;
+  transition: all $transition-time-fast ease;
+  position: relative;
+  padding: 1rem;
+  height: 6rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  > p { @include text-overflow-ellipsis(); }
+
+  > svg { 
+    height: $icon-x-large; 
+    width: $icon-x-large; 
+    min-height: $icon-x-large; 
+    min-width: $icon-x-large; 
+  }
+
+  &:hover {    
+    color: $color-blue;
+    transition: all $transition-time-fast ease;
+    background-color: $color-hover-blue;
+    border: 1px solid $color-blue;
+    box-shadow: 1px 3px 3px $color-hover-blue;
+  }
+}
+
+.file_information_container_hidden {
+  transition: all $transition-time-fast ease;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.file_information_container {
+  border: 1px solid $color-blue;
+  box-shadow: 1px 1px 1px $color-hover-blue;
+  transition: all $transition-time-fast ease;
+  position: fixed;
+  z-index: 2;
+  top: 0%;
+  overflow-x: auto;
+  border-radius: 5px;
+  width: 50%;
+  max-height: 90vh;
+  opacity: 1;
+  visibility: visible;
+  background-color: white;
+  cursor: auto;
+
+  p, pre { 
+    color: black; 
+    user-select: text;
+    cursor: text; 
+  }
+
+  .file_preview_name {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);     
+  }
+
+  .file_preview_content {
+    padding: 1rem 1.5rem;
+  }
+
+  .file_preview_content_file {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.file_preview_background::before {
+  content: "";
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  z-index: 1;
+  left: 0%;
+  top: 0%;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100%;
+}
+
+.file_preview_background_hidden::before {
+  opacity: 0;
+  visibility: hidden;
+}

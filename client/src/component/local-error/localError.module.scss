@@ -1,0 +1,10 @@
+@use '@/scss/reusable' as *;
+
+.local_error_container {
+  color: #500;
+
+  > svg {
+    width: $icon-large;
+    height: $icon-large;
+  }
+}

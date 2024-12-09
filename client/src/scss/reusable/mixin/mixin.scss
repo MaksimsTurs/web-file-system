@@ -1,0 +1,55 @@
+@use '../variabel/variabel.scss' as Variabel;
+
+@mixin absolute-left-top-zindex-width-height($left: 0%, $top: 0%, $z-index: 1, $width: 100%, $height: 100%) {
+  left: $left;
+  top: $top;
+  z-index: $z-index;
+  width: $width;
+  height: $height;
+  position: absolute;
+}
+
+@mixin text-overflow-ellipsis() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 0;
+}
+
+@mixin button-slide-right-animation() {
+  width: fit-content;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, Variabel.$color-common 50%, white 50%);
+  transition: background-position Variabel.$transition-time-fast ease;
+  border: 1px solid Variabel.$color-common;
+  overflow: hidden;
+  color: white;
+
+  &:hover {
+    color: Variabel.$color-common-hover;
+    border: 1px solid Variabel.$color-common-hover;
+    transition: background-position Variabel.$transition-time-fast ease;
+    background-position: -100% 0%;
+  }
+}
+
+@mixin loader-animation() {
+  @keyframes loader {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+}
+
+@mixin loader($border-radius: Variabel.$border-radiues-button) {
+  border-radius: $border-radius;
+  background-color: rgba(192, 192, 192, 0.4);
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    @include absolute-left-top-zindex-width-height(-100%);
+    animation: loader 1s infinite;
+    background: linear-gradient(90deg, transparent 0%,rgba(255, 255, 255, 0.5) 50%, transparent 100%);     
+  }
+}

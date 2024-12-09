@@ -1,0 +1,18 @@
+@use '@/scss/reusable' as *;
+
+.breadcrumbs_container {
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  
+  > p {
+    color: $color-blue;
+    transition: all $transition-time-fast ease;
+    padding: 1rem;
+    // border-right: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    &:hover {
+      transition: all $transition-time-fast ease;
+      background-color: $color-hover-blue;
+    }
+  }
+}

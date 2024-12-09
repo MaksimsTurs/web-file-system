@@ -1,0 +1,51 @@
+@use '@/scss/reusable' as *;
+
+.preview_inserted_item {
+  padding: 0rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+  position: relative;
+
+  &:nth-child(2) { padding-top: 0.5rem; }
+
+  &:last-child { 
+    padding-bottom: 0.5rem; 
+    margin-bottom: 0rem; 
+    border-bottom: none; 
+  }
+}
+
+.preview_inserted_item_configurations_container {
+  @include absolute-left-top-zindex-width-height(0%, 0%, 2);
+  transition: all $transition-time-fast ease;
+  opacity: 1;
+  visibility: visible;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.2);
+
+  .preview_inserted_item_configurations_body {
+    box-shadow: 1px 1px 1px $color-hover-blue;
+    background-color: white;    
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 1rem;
+
+    .prev_inserted_item_header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.preview_inserted_item_configurations_container_hidden {
+  transition: all $transition-time-fast ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preview_inserted_preview {
+  max-width: 30rem;
+  height: auto;
+}

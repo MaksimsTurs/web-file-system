@@ -1,0 +1,11 @@
+@use '@/scss/reusable' as *;
+
+.empty_container {
+  padding: 0.5rem;
+  color: silver;
+
+  > svg {
+    width: $icon-large;
+    height: $icon-large;
+  }
+}

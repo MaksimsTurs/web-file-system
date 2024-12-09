@@ -1,0 +1,10 @@
+@use '@/scss/reusable.scss' as *;
+
+.item_page_preview_container {
+  width: 100%;
+
+  .item_page_preview_media {
+    width: 35rem;
+    height: auto;
+  }
+}

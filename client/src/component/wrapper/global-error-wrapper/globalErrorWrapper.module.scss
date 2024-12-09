@@ -1,0 +1,11 @@
+@use '@/scss/reusable' as *;
+
+.global_error_container {  
+  flex-grow: 1;
+
+  svg, p { color: #500; }
+
+  p { font-size: $font-x-large; }
+
+  svg { width: $icon-xx-large; height: $icon-xx-large; }
+}

@@ -1,0 +1,15 @@
+@use '@/scss/reusable.scss' as *;
+
+.text_input {
+  transition: all $transition-time-fast ease;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  padding: 0.75rem 1rem;
+
+  &:hover, &:focus {
+    border: 1px solid $color-blue;
+    transition: all $transition-time-fast ease;
+    box-shadow: 1px 5px 5px $color-hover-blue;
+  }
+}

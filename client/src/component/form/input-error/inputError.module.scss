@@ -1,0 +1,8 @@
+@use '@/scss/reusable.scss' as *;
+
+.input_error {
+  margin-top: 0.5rem;
+  color: #500;
+
+  svg { width: $icon-medium; height: $icon-medium; }
+}
